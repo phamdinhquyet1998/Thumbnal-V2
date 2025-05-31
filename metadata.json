@@ -1,0 +1,6 @@
+{
+  "name": "Copy of Photoshop Style Text Animator",
+  "description": "A React application to apply Photoshop-like text styles to user input. Users can type text, select portions, and apply predefined color styles (Red, Yellow, Blue) with complex visual effects like strokes, glows, and shadows, mimicking advanced text styling.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

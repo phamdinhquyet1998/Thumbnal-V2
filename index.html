@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photoshop Style Text Animator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Impact&display=swap'); /* Impact-like font */
+
+    body {
+      font-family: 'Inter', sans-serif; /* Default UI font */
+      background-color: #333; /* Dark background for contrast */
+      color: #FFF;
+    }
+
+    /* Base for styled text */
+    .styled-text-base {
+      /* font-family: 'Impact', 'Arial Black', sans-serif; */ /* Removed to allow inheritance */
+      font-weight: 900; /* Or use 'black' if font supports */
+      line-height: 1.2; /* Adjust for tight lines like example */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Shared Neon Glow Variables */
+    :root {
+      --neon-glow-color-step1: #E1F5FE; /* Lighter variant of light blue - more whiteish */
+      --neon-glow-color-step2: #B3E5FC; /* Light blue */
+      --neon-glow-color-step3: rgba(179, 229, 252, 0.7);
+      --neon-glow-color-step4: rgba(179, 229, 252, 0.5);
+    }
+
+    /* Yellow Effect - Neon Style */
+    .text-effect-yellow {
+      color: #FFB800; /* Bright yellow-orange */
+      text-shadow:
+        /* Inner "hot" part - related to text color */
+        0 0 2px #FFFDE7, /* Pale Yellow */
+        0 0 4px #FFFDE7,
+        0 0 7px #FFFACD, /* Lemon Chiffon */
+        /* Outer shared "bluish-white" glow */
+        0 0 10px var(--neon-glow-color-step1),
+        0 0 15px var(--neon-glow-color-step2),
+        0 0 22px var(--neon-glow-color-step3),
+        0 0 30px var(--neon-glow-color-step4);
+    }
+
+    /* Red Effect - Neon Style */
+    .text-effect-red {
+      color: #F44336; /* Main Red */
+      text-shadow:
+        /* Inner "hot" part - related to text color */
+        0 0 2px #FFEBEE, /* Lightest Pink */
+        0 0 4px #FFEBEE,
+        0 0 7px #FFCDD2, /* Lighter Pink */
+        /* Outer shared "bluish-white" glow */
+        0 0 10px var(--neon-glow-color-step1),
+        0 0 15px var(--neon-glow-color-step2),
+        0 0 22px var(--neon-glow-color-step3),
+        0 0 30px var(--neon-glow-color-step4);
+    }
+
+    /* Blue Effect - Neon Style */
+    .text-effect-blue {
+      color: #2196F3; /* Main Blue */
+      text-shadow:
+        /* Inner "hot" part - related to text color */
+        0 0 2px #E3F2FD, /* Lightest Blue */
+        0 0 4px #E3F2FD,
+        0 0 7px #BBDEFB, /* Lighter Blue */
+        /* Outer shared "bluish-white" glow */
+        0 0 10px var(--neon-glow-color-step1),
+        0 0 15px var(--neon-glow-color-step2),
+        0 0 22px var(--neon-glow-color-step3),
+        0 0 30px var(--neon-glow-color-step4);
+    }
+    
+    .text-effect-none {
+      color: #E5E7EB; /* Default Tailwind gray-200 */
+      text-shadow: none;
+    }
+
+    .has-drop-shadow {
+      /* Applied to the span containing styled text */
+      filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.55)); /* Adjusted for subtlety */
+    }
+
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
